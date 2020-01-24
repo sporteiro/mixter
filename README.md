@@ -1,7 +1,7 @@
 # mixter
 Gstreamer player with web interface
 
-#log in
+# log in
 
-*user: user
-*password: user
+* user: user
+* password: user
