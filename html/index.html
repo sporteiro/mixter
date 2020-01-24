@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--Sebastian Porteiro 
+Zeusrs-->
+<html>
+  <head>
+    <title>Mixter video mixer</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+	<script src="/js/language.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/alertify.min.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link type="text/css" href="/css/alertify.css" rel="stylesheet">
+    <link type="text/css" href="/css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="">
+    <header>
+      <h1>Mixter</h1>
+	  <div id="settings"><button onclick="gotoPath('/settingshtml')">Settings</button></div>
+    </header>
+
+    <main id="">
+      <div class="">
+        <fieldset id="player_input">
+          <legend>Input</legend>
+          <div class="fieldrow">
+            <label>Input</label>
+            <select id="input_type" onchange="toggleInput()">
+              <option id="udp_src" value="udp_src">UDP</option>
+              <option id="rtp_src" value="rtp_src">RTP</option>
+              <option id="shm_src" value="shm_src">Shared memory</option>
+              <option id="tcp_src" value="tcp_src">TCP</option>
+            </select>
+          </div>
+
+          <div id="options_shm_src" class="options_input, hidden">
+            <div class="fieldrow"> <label>Video</label> <input id="video_src" type="text"></input></div>
+            <div class="fieldrow"> <label>Audio</label> <input id="audio_src" type="text"></input></div>
+            <div class="fieldrow"> <label>Color</label> <input id="video_format" type="text"></input></div>
+          </div>
+
+          <div id="options_udp_rtp_src" class="options_input, hidden">
+            <div class="fieldrow"> <label>IP</label> <input id="udp_ip_src" type="text"></input> </div>
+            <div class="fieldrow"> <label>PORT</label> <input id="udp_port_src" type="text"></input> </div>
+          </div>
+
+          <div id="options_tcp_src" class="options_input, hidden">
+            <div class="fieldrow"> <label>IP</label> <input id="tcp_ip_src" type="text"></input> </div>
+            <div class="fieldrow"> <label>PORT</label> <input id="tcp_port_src" type="text"></input> </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset id="player_output">
+
+          <legend>Output</legend>
+
+          <div class="fieldrow">
+            <label>Output</label>
+            <select id="output_type" onchange="toggleOutput()">
+              <option id="window" value="window">window</option> <!-- Nada -->
+              <option id="file" value="file">File</option>
+              <option id="rtmp" value="rtmp">RTMP</option>
+              <option id="tcp" value="tcp">TCP</option>
+              <option id="udp" value="udp">UDP</option>
+            </select>
+          </div>
+
+          <div id="options_tcp" class="options_output, hidden">
+            <div class="fieldrow"> <label>TCP IP</label> <input id="tcp_ip" type="text"></input> </div>
+            <div class="fieldrow"> <label>TCP PORT</label> <input id="tcp_port" type="text"></input> </div>
+          </div>
+
+          <div id="options_udp" class="options_output, hidden">
+            <div class="fieldrow"> <label>UDP IP</label> <input id="udp_ip" type="text"></input> </div>
+            <div class="fieldrow"> <label>UDP PORT</label> <input id="udp_port" type="text"></input> </div>
+          </div>
+
+          <div id="options_file" class="options_output, hidden">
+            <div class="fieldrow"> <label>File path</label> <input id="file_path" type="text"></input> </div>
+            <div class="fieldrow"> <label>File duration</label> <input id="file_duration" type="text"></input> </div>
+            <div class="fieldrow"> <label>File bitrate</label> <input id="file_bitrate" type="text"></input> </div>
+            <div class="fieldrow"> <label>File temporay files path</label> <input id="file_tmp_path" type="text"></input> </div>
+          </div>
+
+          <div id="options_rtmp" class="options_output, hidden">
+            <div class="fieldrow"> <label>RTMP url</label> <input id="rtmp_url" type="text"></input> </div>
+          </div>
+
+        </fieldset>
+
+		<button onclick="saveReloadPlay()" title="Pipeline">Run Pipeline</button>
+
+		<div id="pipelines_list" class="pipelines"></div>
+      </div>
+
+      <fieldset class="" id="layout_logger">
+ 		<button class="icon_button clear" onclick=flushLog()>Flush logs</button>
+        <div id="layout_logger_console" class="layout_logger_console">
+          <div id="layout_logger_console_content" class="log"></div>
+
+          <button id="toggle_scroll" class="icon_button scroll_active" onclick=toggle_scrollLog()>Auto scroll</button>
+          <button class="icon_button reload" onclick=getLog()>Refresh log</button>
+         
+        </div>
+      </fieldset>
+      </main>
+	<div class="footer">
+		<div  id="current_version"></div>
+		<button onclick="logOut()">Logout</div>
+	
+	</div>
+    </div>
+	
+  </body>
+</html>

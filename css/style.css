@@ -1,0 +1,36 @@
+/* Sebastian Porteiro 
+Zeusrs*/
+body	{
+	border: 0px solid black;
+}
+.pipelines	{
+	overflow-y: auto;
+	max-height:460px;
+	padding: 5px;
+}
+
+.eachpipeline	{
+	font-family: Sans;
+	background-color: #7fc324;
+	color: white;
+	padding: 5px;
+}
+
+.log	{
+	font-family: monospace;
+	background-color: black;	
+	color: lightgreen;
+	padding: 5px;
+	overflow-y: auto;
+	height:160px;
+}
+
+button {
+	background-color: #6d59dc;
+    border: solid 0px #000000;
+    color: #fff;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+}
