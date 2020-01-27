@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="717.1784"
-     inkscape:cy="455.36694"
+     inkscape:zoom="0.5"
+     inkscape:cx="563.2176"
+     inkscape:cy="505.62502"
      inkscape:document-units="px"
      inkscape:current-layer="g1468"
      showgrid="false"
@@ -35,83 +35,7 @@
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="true"
-     inkscape:guide-bbox="true">
-    <sodipodi:guide
-       position="602.32143,438.91129"
-       orientation="0,1"
-       id="guide1417"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="602.32143,438.91129"
-       orientation="1,0"
-       id="guide1421"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="604.3129,451.2056"
-       orientation="0,1"
-       id="guide860"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="589.00038,458.76031"
-       orientation="0,1"
-       id="guide874"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="589.00038,429.60018"
-       orientation="0,1"
-       id="guide876"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="589.00038,429.60018"
-       orientation="1,0"
-       id="guide878"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="615.68012,429.60018"
-       orientation="1,0"
-       id="guide880"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="592.82855,429.60018"
-       orientation="1,0"
-       id="guide889"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="611.83247,429.60018"
-       orientation="1,0"
-       id="guide891"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="602.32143,446.18438"
-       orientation="0,1"
-       id="guide893"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="602.32143,442.86982"
-       orientation="0,1"
-       id="guide895"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="606,433.6875"
-       orientation="0,1"
-       id="guide897"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="600.81133,447.16149"
-       orientation="0,1"
-       id="guide899"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="594.87929,458.76031"
-       orientation="1,0"
-       id="guide905"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="609.80121,458.76031"
-       orientation="1,0"
-       id="guide907"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
+     inkscape:guide-bbox="true" />
   <defs
      id="defs815" />
   <metadata
@@ -140,57 +64,31 @@
          style="font-style:normal;font-weight:normal;font-size:25.94391632px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.64859796;stroke-opacity:1"
          aria-label="T" />
       <g
-         id="g913">
-        <g
-           transform="matrix(1,0,0,0.85983194,0,44.120889)"
-           id="text848"
-           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#950000;fill-opacity:1;stroke:none;stroke-width:0.13855459"
-           aria-label="M">
-          <path
-             sodipodi:nodetypes="cccccccccccccc"
-             inkscape:connector-curvature="0"
-             id="path854"
-             style="fill:#460013;fill-opacity:1;stroke-width:0.13855459"
-             d="m 564.41356,314.77134 h 0.81455 l 1.03104,0.42871 1.03646,-0.42871 h 0.81455 v 4.04027 h -1.85091 c 1.14218,-0.75688 1.83938,-1.78324 1.3178,-3.54775 l -1.04187,0.72486 h -0.54935 l -1.04186,-0.72486 c -0.47116,1.63671 0.0623,2.77186 1.31528,3.54775 h -1.84569 z" />
-        </g>
-        <g
-           transform="matrix(0.77116404,0,0,0.60197201,131.04945,126.17208)"
-           id="text884"
-           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010062;fill-opacity:1;stroke:none;stroke-width:0.13855459"
-           aria-label="T">
-          <path
-             sodipodi:nodetypes="ccccccccc"
-             inkscape:connector-curvature="0"
-             id="path886"
-             style="fill:#000000;fill-opacity:1;stroke-width:0.13855459"
-             d="m 562.6488,315.03306 h 3.41786 v 1.55881 l -1.43425,-0.61982 v 3.10128 h -0.54935 v -3.10128 l -1.43426,0.61982 z" />
-        </g>
-      </g>
-      <g
          transform="matrix(5.9275378,0,0,5.9275378,-2723.1477,-1575.7963)"
-         id="g913-3">
+         id="g913-3"
+         style="fill:#0000ff">
         <g
            transform="matrix(1,0,0,0.85983194,0,44.120889)"
            id="text848-6"
-           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#950000;fill-opacity:1;stroke:none;stroke-width:0.13855459"
+           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:#ff0000;stroke-width:0.13855459;stroke-opacity:1"
            aria-label="M">
           <path
              sodipodi:nodetypes="cccccccccccccc"
              inkscape:connector-curvature="0"
              id="path854-7"
-             style="fill:#460013;fill-opacity:1;stroke-width:0.13855459"
+             style="fill:#0000ff;fill-opacity:1;stroke-width:0.13855459;stroke:#ff0000;stroke-opacity:1"
              d="m 564.41356,314.77134 h 0.81455 l 1.03104,0.42871 1.03646,-0.42871 h 0.81455 v 4.04027 h -1.85091 c 1.14218,-0.75688 1.83938,-1.78324 1.3178,-3.54775 l -1.04187,0.72486 h -0.54935 l -1.04186,-0.72486 c -0.47116,1.63671 0.0623,2.77186 1.31528,3.54775 h -1.84569 z" />
         </g>
         <g
            transform="matrix(0.77116404,0,0,0.60197201,131.04945,126.17208)"
            id="text884-5"
-           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010062;fill-opacity:1;stroke:none;stroke-width:0.13855459"
+           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:#ff0000;stroke-width:0.13855459;stroke-opacity:1"
            aria-label="T">
           <path
              sodipodi:nodetypes="ccccccccc"
              inkscape:connector-curvature="0"
              id="path886-3"
-             style="fill:#000000;fill-opacity:1;stroke-width:0.13855459"
+             style="fill:#00ff00;fill-opacity:1;stroke-width:0.13855459;stroke:#ff0000;stroke-opacity:1"
              d="m 562.6488,315.03306 h 3.41786 v 1.55881 l -1.43425,-0.61982 v 3.10128 h -0.54935 v -3.10128 l -1.43426,0.61982 z" />
         </g>
       </g>
