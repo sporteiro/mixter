@@ -63,7 +63,7 @@ Gstreamer player with web interface
 
 Run 
 
-		python3 ./http_server.py
+	python3 ./http_server.py
 
 Access the web interface with:
 
