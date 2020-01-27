@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="927.07216"
-     inkscape:cy="564.94554"
+     inkscape:zoom="2"
+     inkscape:cx="895.25341"
+     inkscape:cy="502.31093"
      inkscape:document-units="px"
-     inkscape:current-layer="text884-5"
+     inkscape:current-layer="g913-3"
      showgrid="false"
      inkscape:window-width="1853"
      inkscape:window-height="1014"
@@ -52,11 +52,6 @@
        inkscape:locked="false"
        id="guide888" />
     <sodipodi:guide
-       position="1143.2143,592.8098"
-       orientation="1,0"
-       inkscape:locked="false"
-       id="guide890" />
-    <sodipodi:guide
        position="1030.4545,592.8098"
        orientation="0,1"
        inkscape:locked="false"
@@ -71,6 +66,61 @@
        orientation="0,1"
        inkscape:locked="false"
        id="guide896" />
+    <sodipodi:guide
+       position="1086.7194,621.61034"
+       orientation="1,0"
+       id="guide827"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1039.75,532.87501"
+       orientation="0,1"
+       id="guide829"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1077.7726,546"
+       orientation="0,1"
+       id="guide831"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1142.2567,579.02123"
+       orientation="0,1"
+       id="guide833"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1141.7994,531.02615"
+       orientation="1,0"
+       id="guide835"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1086.7194,620.25001"
+       orientation="0,1"
+       id="guide837"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1070.5597,555.43238"
+       orientation="0,1"
+       id="guide839"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1042.6103,637.3803"
+       orientation="1,0"
+       id="guide834"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1131.0605,637.3803"
+       orientation="1,0"
+       id="guide838"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1086.7194,563.65249"
+       orientation="-0.70710678,0.70710678"
+       id="guide840"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1086.7194,563.65249"
+       orientation="0.70710678,0.70710678"
+       id="guide844"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs815" />
@@ -94,11 +144,13 @@
        id="g1468"
        transform="matrix(7.2173721,0,0,7.2173721,-3484.5823,-2010.5822)">
       <path
-         style="opacity:1;fill:#b10000;fill-opacity:1;stroke:none;stroke-width:0.86512136;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 622.435,291.33475 c 7.05656,1.82424 14.33295,2.02714 21.91173,0 v 19.27998 H 622.435 Z"
+         style="opacity:1;fill:#9f2100;fill-opacity:1;stroke:none;stroke-width:0.86512136;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 622.435,291.33475 c 9.70019,1.06145 12.21134,1.06145 21.91173,0 v 19.27998 H 622.435 Z"
          id="rect898"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccccc" />
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-xdpi="60.700001"
+         inkscape:export-ydpi="60.700001" />
       <g
          inkscape:export-ydpi="1734.12"
          inkscape:export-xdpi="1734.12"
@@ -108,30 +160,32 @@
       <g
          transform="matrix(5.9275378,0,0,5.9275378,-2723.1477,-1575.7963)"
          id="g913-3"
-         style="fill:#000088;fill-opacity:1">
+         style="fill:#860010;fill-opacity:1"
+         inkscape:export-xdpi="60.700001"
+         inkscape:export-ydpi="60.700001">
         <g
            transform="matrix(1,0,0,0.85983194,0,44.120889)"
            id="text848-6"
-           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000088;fill-opacity:1;stroke:#ff0000;stroke-width:0.13855459;stroke-opacity:1"
+           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#860010;fill-opacity:1;stroke:#ff0000;stroke-width:0.13855459;stroke-opacity:1"
            aria-label="M">
           <path
              sodipodi:nodetypes="cccccccccccccc"
              inkscape:connector-curvature="0"
              id="path854-7"
-             style="fill:#000088;fill-opacity:1;stroke:none;stroke-width:0.13855459;stroke-opacity:1"
-             d="m 564.41356,314.77134 h 0.81455 l 1.03104,0.42871 1.03646,-0.42871 h 0.81455 v 4.04027 h -1.6365 c 1.14218,-0.75688 1.62497,-1.78324 1.10339,-3.54775 l -1.10339,0.72486 -0.42364,-0.006 -1.10605,-0.71914 c -0.47116,1.63671 -0.14693,2.77186 1.10605,3.54775 h -1.63646 z" />
+             style="fill:#010072;fill-opacity:1;stroke:none;stroke-width:0.13855459;stroke-opacity:1"
+             d="m 564.41356,314.77134 h 0.81455 l 1.03104,1.21166 1.03646,-1.21166 h 0.81455 v 4.04027 h -1.6365 c 1.14218,-0.75688 1.62497,-1.78324 1.10339,-3.54775 l -1.3179,1.51179 v 0 l -1.31518,-1.51207 c -0.47116,1.63671 -0.14693,2.77186 1.10605,3.54775 h -1.63646 z" />
         </g>
         <g
            transform="matrix(0.7580669,0,0,0.59174836,138.44092,129.39287)"
            id="text884-5"
-           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000088;fill-opacity:1;stroke:#009100;stroke-width:0.13855459;stroke-opacity:1"
+           style="font-style:normal;font-weight:normal;font-size:5.5421834px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0f9e00;fill-opacity:1;stroke:#009100;stroke-width:0.13855459;stroke-opacity:1"
            aria-label="T">
           <path
              sodipodi:nodetypes="cccccccccc"
              inkscape:connector-curvature="0"
              id="path886-3"
-             style="fill:#000088;fill-opacity:1;stroke:#39c300;stroke-width:0.13855459;stroke-opacity:1"
-             d="m 562.6488,315.03306 h 3.41786 v 1.13219 l -1.43425,-0.1932 v 3.10128 h -0.54935 v -2.99792 -0.10336 l -1.43426,0.1932 z" />
+             style="fill:#0f9e00;fill-opacity:1;stroke:none;stroke-width:0.13855459;stroke-opacity:1"
+             d="m 562.9941,316.1848 2.72733,0 0.33113,1.21575 -1.4154,-0.89104 -0.005,2.56382 h -0.54935 l -0.005,-2.19123 v -0.37259 l -1.42911,0.89104 z" />
         </g>
       </g>
     </g>

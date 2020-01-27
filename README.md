@@ -1,8 +1,5 @@
-# MIXTER
+# MIXTER ![Alt text](https://github.com/sporteiro/mixter/blob/master/img/bw.png)
 Gstreamer player with web interface
-
-![Alt text](https://github.com/sporteiro/mixter/blob/master/img/mixter.png)
-
 
 ## Dependencies
 
