@@ -55,3 +55,4 @@ RUN git clone --depth 1 https://github.com/sporteiro/mixter.git && \
 
 EXPOSE 8066
 WORKDIR /mixter
+CMD ["python3", "/mixter/http_server.py"]

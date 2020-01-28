@@ -58,7 +58,18 @@ Gstreamer player with web interface
 
 ## Usage
 
-Run 
+### Docker
+Create image with:
+
+	docker build -t mixter:0.2 -f Dockerfile .
+
+
+Run container sharing port (default :8066) and volumes if required (ie. for settings)
+
+	docker run -ti -p 8066:8066 -v /home/mixter_settings.cfg:/mixter/mixter_settings.cfg mixter:0.2
+
+
+With or without `Docker` app would be running
 
 	python3 ./http_server.py
 
