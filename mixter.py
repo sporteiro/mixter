@@ -72,7 +72,7 @@ class Mixter(object):
 # GSTREAMER build Pipeline	    #
 #				                #
 #################################
-	def build_pipeline(self,pipeline_text=''):
+	def build_pipeline(self,pipeline_text='',src='',sink=''):
 		pipes = Pipes()
 		pipeline_number = self.pipeline_number
 		self.pipelines_desc[pipeline_number] = {}
@@ -110,8 +110,8 @@ class Mixter(object):
 			self.log_message('[DEBUG] GST state ' + self.gst_pipeline_state)
 
 			self.pipelines_desc[pipeline_number]['name'] = str(self.pipelines[pipeline_number].get_name())
-			self.pipelines_desc[pipeline_number]['src'] = str(self.loaded_settings['input_type'])
-			self.pipelines_desc[pipeline_number]['sink'] = str(self.loaded_settings['output_type'])
+			self.pipelines_desc[pipeline_number]['src'] = src or str(self.loaded_settings['input_type'])
+			self.pipelines_desc[pipeline_number]['sink'] = sink or str(self.loaded_settings['output_type'])
 
 
 		self.pipeline_number += 1
@@ -175,6 +175,8 @@ class Mixter(object):
 		self.log_message("[DEBUG] Reconnect " + str(self.pipelines[pipeline_number].get_name()))
 		time.sleep(.5)
 		pipeline_text = self.pipelines_desc[pipeline_number]['pipeline_text']
+		src = self.pipelines_desc[pipeline_number]['src']
+		sink = self.pipelines_desc[pipeline_number]['sink']
 		try:
 			self.pipelines[pipeline_number].set_state(Gst.State.NULL)
 			self.gst_pipeline_state = 'NULL'
@@ -194,7 +196,7 @@ class Mixter(object):
 		self.busses[pipeline_number]=None
 		print('MIXTER LOG: Reconnect: executing build_pipeline')
 		self.log_message("[WARNING] Reconnect: executing build_pipeline")
-		self.build_pipeline(pipeline_text)
+		self.build_pipeline(pipeline_text,src,sink)
 
 	def kill_pipeline(self,pipeline_number):
 

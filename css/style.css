@@ -34,3 +34,20 @@ button {
     line-height: 25px;
     position: relative;
 }
+.pipeline_desc	{
+	font-size:1em;
+}
+
+.eachpipeline	h3{
+	background-color: #000;
+	color: white;
+	padding: 5px;
+}
+.invisible	{
+	visibility:hidden;
+	display:none;
+}
+.visible	{
+	visibility:visible;
+	display:inherit;
+}

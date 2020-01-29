@@ -153,10 +153,13 @@ function updatePipelines(uri) {
 		if (norepeat.includes(key))	{console.log(norepeat);}
 		else	{
 			norepeat.push(key)
-		    $('#pipelines_list').append('<p class="eachpipeline">'+data[key]['name']+': '+data[key]['src']+' --> '+data[key]['sink']+' pipeline: '+data[key]['pipeline_text']+'  <button onclick="killPipeline('+key+')">Kill</button></p> <br />');
+		    $('#pipelines_list').append('<div class="eachpipeline"><h3>'+data[key]['name']+'</h2> <p>Input: '+data[key]['src']+'</p><p>Output: '+data[key]['sink']+'</p><p class="pipeline_desc invisible"> pipeline: '+data[key]['pipeline_text']+' </p>  <button onclick="showPipeline_text()">More</button> <button onclick="killPipeline('+key+')">Kill</button></div> <br />');
 		}
     });
   });
+}
+function showPipeline_text()	{
+	$(".pipeline_desc").removeClass('invisible');
 }
 function killPipeline(id)	{
 	    $.post("/kill_pipeline", ''+id+'');
@@ -215,14 +218,7 @@ function toggleOutputOptions() {
   else if ($('#output_type').val() == 'rtmp') $('#options_rtmp').show();
   else if ($('#output_type').val() == 'tcp') $('#options_tcp').show();
   else if ($('#output_type').val() == 'udp') $('#options_udp').show();
-  else if ($('#output_type').val() == 'mpeg2') $('#options_udp').show();
   //console.log('output');
-}
-
-function toggleButtons(str) {
-  console.log(str);
-  if ($('.led_parent .icon_button.'+str).hasClass('active')) $('.led_parent .icon_button.' + str).removeClass('active');
-  else $('.led_parent .icon_button.'+str).addClass('active')
 }
 
 function showChildren(str) {
