@@ -64,7 +64,7 @@ Create image with:
 	docker build -t mixter:0.2 -f Dockerfile .
 
 
-Run container with sharing port (default :8066) and volumes if required (ie. for settings)
+Run container with shared port (default :8066) and volumes if required (ie. for settings)
 
 	docker run -ti -p 8066:8066 -v /home/mixter_settings.cfg:/mixter/mixter_settings.cfg mixter:0.2
 
