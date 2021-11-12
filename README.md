@@ -64,12 +64,12 @@ Create image with:
 	docker build -t mixter:0.2 -f Dockerfile .
 
 
-Run container sharing port (default :8066) and volumes if required (ie. for settings)
+Run container with sharing port (default :8066) and volumes if required (ie. for settings)
 
 	docker run -ti -p 8066:8066 -v /home/mixter_settings.cfg:/mixter/mixter_settings.cfg mixter:0.2
 
 
-With or without `Docker` app would be running
+With or without `Docker` app would be running with
 
 	python3 ./http_server.py
 
@@ -78,7 +78,7 @@ Access the web interface with:
 * user: user
 * password: user
 
-"Run pipeline" as many times as pipelines you need or as long as your machine doesn't melt
+"Run pipeline" as many times as pipelines you need or as long as your machine doesn't melt down
 
 ## How it works
 
