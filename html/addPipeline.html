@@ -1,0 +1,97 @@
+<header>
+    <h1 id="">New pipeline</h1>
+    <!-- <div id="advanced_search_message" class="obwidget message hidden" data-type="message"></div> -->
+
+    <button id="addPipelineSwitch" class="header_button add add_only" onclick="MX.addPipelineSwitch()">Pipeline</button>
+</header>
+
+
+<div id="addPipelineForm">
+<fieldset>
+    <div class="fieldrow"> <label t-data>Name</label> <input id="pipeline_name" class="input_settings" name="pipeline_name" type="text" placeholder="Pipeline"></input> </div>
+</fieldset>
+
+<fieldset>
+    <div class="fieldrow">
+        <label t-data>Type</label>
+        <select id="pipeline_type" class="input_settings" name="pipeline_type" onchange="MX.togglePipelineType()">
+            <option id="none_type" value="none_type">None</option>
+            <option id="gstreamer" value="gstreamer">GStreamer</option>
+            <option id="ffmpeg" value="ffmpeg">FFmpeg</option>
+        </select>
+    </div>
+</fieldset>
+
+<fieldset id="player_input_1">
+    <!-- <div id="json_content"></div> -->
+
+    <div class="fieldrow">
+        <label t-data>input_1</label>
+        <select id="input_1_type" class="input_settings" name="input_1_type" onchange="MX.toggleInput(1)">
+            <option value="none_src">None</option>
+        </select>
+    </div>
+    <div id="opt_input_1_options"></div>
+</fieldset>
+
+<fieldset id="player_input_2">
+
+    <div class="fieldrow">
+        <label t-data>input_2</label>
+        <select id="input_2_type" class="input_settings" name="input_2_type" onchange="MX.toggleInput(2)">
+            <option value="none_src">None</option>
+        </select>
+    </div>
+    <div id="opt_input_2_options"></div>
+</fieldset>
+
+<fieldset id="player_output">
+
+    <div class="fieldrow">
+        <label t-data>output</label>
+        <select id="output_type" class="input_settings" name="output_type" onchange="MX.toggleOutput()">
+            <option value="none_sink">None</option>
+        </select>
+    </div>
+    <div id="opt_output_options"></div>
+
+</fieldset>
+
+<!-- sebastian FIXME this is always sending overlay=on, Even when not checked -->
+<fieldset>
+    <div id="opt_overlay" class="opt_output hidden">
+        <div class="fieldrow"> <label>DOG</label> <input id="default_DOG" class="input_settings" name="default_DOG" type="text"></input> </div>
+        <div class="fieldrow"> <label>Overlay</label> <input id="overlay" class="input_settings" name="overlay" type="checkbox" value="Off" onchange="MX.checkboxChange(overlay);"></input> </div>
+    </div>
+
+</fieldset>
+
+</div>
+
+<div id="addPipelineText" class="add_only hidden">
+<fieldset>
+    <div class="fieldrow">
+        <label>Type</label>
+        <select id="pipeline_type" class="input_settings" name="pipeline_type" onchange="MX.togglePipelineType()">
+            <option value="none_type">None</option>
+            <option value="gstreamer">GStreamer</option>
+            <option value="ffmpeg">FFmpeg</option>
+        </select>
+    </div>
+</fieldset>
+
+<fieldset>
+    <div id="pipeline_info">
+        <textarea id="pipeline_info_text" class="mono" onclick="MX.selectPipelineText()"></textarea>
+    </div>
+</fieldset>
+</div>
+
+<fieldset class="big_buttons_container">
+    <div class="big_buttons">
+        <button class="big_icon_button add" onclick="MX.addPipeline()" title="Add"></button>
+        <button class="big_icon_button cancel" onclick="MX.closeModalWindow()" title="Cancel"></button>
+        <button id="pipeline_info_paste" class="big_icon_button paste add_only hidden" onclick="MX.pasteText('pipeline_info_text')" title="Paste"></button>
+    </div>
+</fieldset>
+<script>MX.Lang.translate();</script>

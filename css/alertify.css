@@ -1,7 +1,7 @@
 /**
- * alertifyjs 1.13.1 http://alertifyjs.com
+ * alertifyjs 1.11.1 http://alertifyjs.com
  * AlertifyJS is a javascript framework for developing pretty browser dialogs and notifications.
- * Copyright 2019 Mohammad Younes <Mohammad@alertifyjs.com> (http://alertifyjs.com) 
+ * Copyright 2018 Mohammad Younes <Mohammad@alertifyjs.com> (http://alertifyjs.com)
  * Licensed under GPL 3 <https://opensource.org/licenses/gpl-3.0>*/
 .alertify .ajs-dimmer {
   position: fixed;
@@ -892,7 +892,7 @@
   top: 10px;
 }
 .alertify-notifier.ajs-bottom {
-  bottom: 10px;
+  bottom: 50px;
 }
 .alertify-notifier.ajs-right {
   right: 10px;
@@ -901,7 +901,7 @@
   right: -320px;
 }
 .alertify-notifier.ajs-right .ajs-message.ajs-visible {
-  right: 290px;
+  right: 260px;
 }
 .alertify-notifier.ajs-left {
   left: 10px;
@@ -935,34 +935,4 @@
 }
 .alertify-notifier.ajs-center.ajs-bottom .ajs-message.ajs-visible {
   bottom: 0;
-}
-.ajs-no-transition.alertify .ajs-dimmer,
-.ajs-no-transition.alertify .ajs-modal,
-.ajs-no-transition.alertify .ajs-dialog {
-  -webkit-transition: none!important;
-  transition: none!important;
-  -webkit-animation: none!important;
-          animation: none!important;
-}
-.ajs-no-transition.alertify-notifier .ajs-message {
-  -webkit-transition: none!important;
-  transition: none!important;
-  -webkit-animation: none!important;
-          animation: none!important;
-}
-@media (prefers-reduced-motion: reduce) {
-  .alertify .ajs-dimmer,
-  .alertify .ajs-modal,
-  .alertify .ajs-dialog {
-    -webkit-transition: none!important;
-    transition: none!important;
-    -webkit-animation: none!important;
-            animation: none!important;
-  }
-  .alertify-notifier .ajs-message {
-    -webkit-transition: none!important;
-    transition: none!important;
-    -webkit-animation: none!important;
-            animation: none!important;
-  }
 }

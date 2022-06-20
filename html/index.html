@@ -1,118 +1,152 @@
 <!DOCTYPE html>
-<!--Sebastian Porteiro 
-Zeusrs-->
 <html>
-  <head>
-    <title>Mixter video mixer</title>
-    <script src="/js/jquery-3.3.1.min.js"></script>
-	<script src="/js/language.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/alertify.min.js"></script>
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link type="text/css" href="/css/alertify.css" rel="stylesheet">
-    <link type="text/css" href="/css/style.css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mixter Web</title>
+        <script src="/js/jquery-3.3.1.min.js"></script>
+        <script src="/js/jquery-ui-1.12.1.min.js"></script>
+        <script src="/js/pipes_blueprint.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/language.js"></script>
+        <script src="/js/alertify.min.js"></script>
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link type="text/css" href="/css/alertify.css" rel="stylesheet">
+        <link type="text/css" href="/css/style.min.css" rel="stylesheet">
+    </head>
 
-  </head>
+    <body>
+        <div class="layout_main_container">
+            <header>
+                <h1>Main</h1>
+                <p>Main instructions</p>
+                <button class="header_button restart" onclick="MX.updateDisplay('restart')">Restart</button>
+                <button class="header_button kill" onclick="MX.killPipelines()">Kill all</button>
+                <button class="header_button load" onclick="MX.loadPipelines()">Load</button>
+                <button class="header_button save" onclick="MX.savePipelineList()">Save</button>
+                <button class="header_button add" onclick="MX.newPipeline()">New</button>
 
-  <body>
-    <div class="">
-    <header>
-      <h1>Mixter</h1>
-	  <div id="settings"><button onclick="gotoPath('/settingshtml')">Settings</button></div>
-    </header>
+                <div id="led_buttons">
+                    <!-- <div class="led_parent play" onmouseover="MX.showChildren('play');" onmouseleave="MX.hideChildren('play');">
+                        <button class="icon_button play" onclick="MX.updateDisplay('buildpipeline'); toggleButtons('play');" title="Pipeline">Build Pipeline</button>
+                        <div class="led_children play hidden">
+                            <button class="icon_button reconnect" onclick=MX.updateDisplay('reconnect') title="Reconnect">Reconnect</button>
+                            <button class="icon_button disconnect" onclick=MX.updateDisplay('disconnect') title="Disconnect">Disconnect pipeline</button>
+                            <button class="icon_button reload" onclick=MX.updateDisplay('reload') title="Reload">Reload</button>
+                        </div>
+                    </div> -->
 
-    <main id="">
-      <div class="">
-        <fieldset id="player_input">
-          <legend>Input</legend>
-          <div class="fieldrow">
-            <label>Input</label>
-            <select id="input_type" onchange="toggleInput()">
-              <option id="udp_src" value="udp_src">UDP</option>
-              <option id="rtp_src" value="rtp_src">RTP</option>
-              <option id="shm_src" value="shm_src">Shared memory</option>
-              <option id="tcp_src" value="tcp_src">TCP</option>
-            </select>
-          </div>
+                    <div class="led_parent obplayer" onmouseover="MX.showChildren('obplayer');" onmouseleave="MX.hideChildren('obplayer');">
+                        <button class="icon_button led_parent obplayer" onclick="MX.updateDisplay('launchobplayer');   setTimeout(function() { MX.updateDisplay('checkobplayer'); }, 200);" title="OBplayer">Launch Obplayer</button>
+                        <div class="led_children obplayer hidden">
+                            <button class="icon_button unapproved" onclick=MX.updateDisplay('checkobplayer')>Check OBplayer</button>
+                        </div>
+                    </div>
 
-          <div id="options_shm_src" class="options_input, hidden">
-            <div class="fieldrow"> <label>Video</label> <input id="video_src" type="text"></input></div>
-            <div class="fieldrow"> <label>Audio</label> <input id="audio_src" type="text"></input></div>
-            <div class="fieldrow"> <label>Color</label> <input id="video_format" type="text"></input></div>
-          </div>
+                    <div class="led_parent snowmix" onmouseover="MX.showChildren('snowmix');" onmouseleave="MX.hideChildren('snowmix');">
+                        <button class="icon_button led_parent snowmix" onclick="MX.updateDisplay('launchsnowmix'); setTimeout(function() { MX.updateDisplay('checksnowmix'); }, 200);" title="Snowmix">Launch Snowmix</button>
+                        <div class="led_children snowmix hidden">
+                            <button class="icon_button unapproved" onclick=MX.updateDisplay('checksnowmix')>Check SnowMix</button>
+                        </div>
+                    </div>
 
-          <div id="options_udp_rtp_src" class="options_input, hidden">
-            <div class="fieldrow"> <label>IP</label> <input id="udp_ip_src" type="text"></input> </div>
-            <div class="fieldrow"> <label>PORT</label> <input id="udp_port_src" type="text"></input> </div>
-          </div>
+                    <div class="led_parent brave" onmouseover="MX.showChildren('brave');" onmouseleave="MX.hideChildren('brave');">
+                        <button class="icon_button led_parent brave" onclick="MX.updateDisplay('restartBrave'); setTimeout(function() { MX.updateDisplay('checkbrave'); }, 200);" title="Brave">Launch Brave</button>
+                        <div class="led_children brave hidden">
+                            <button class="icon_button unapproved" onclick=MX.updateDisplay('checkbrave')>Check Brave</button>
+                        </div>
+                    </div>
 
-          <div id="options_tcp_src" class="options_input, hidden">
-            <div class="fieldrow"> <label>IP</label> <input id="tcp_ip_src" type="text"></input> </div>
-            <div class="fieldrow"> <label>PORT</label> <input id="tcp_port_src" type="text"></input> </div>
-          </div>
+                </div>
 
-        </fieldset>
+            </header>
 
-        <fieldset id="player_output">
+            <main id="layout_main">
 
-          <legend>Output</legend>
+                <div class="top_screen">
+                    <!--mixter new stuff -->
+                    <!-- <div class="half_screen"> </div> -->
+                    <div id="pipeline_list"></div>
+                    <!-- <fieldset class="big_buttons_container">
+                        <div class="big_buttons">
+                            <button class="big_icon_button save" onclick="MX.saveSettings()">Save</button>
+                        </div>
+                    </fieldset>-->
+                </div>
 
-          <div class="fieldrow">
-            <label>Output</label>
-            <select id="output_type" onchange="toggleOutput()">
-              <option id="window" value="window">window</option> <!-- Nada -->
-              <option id="file" value="file">File</option>
-              <option id="rtmp" value="rtmp">RTMP</option>
-              <option id="tcp" value="tcp">TCP</option>
-              <option id="udp" value="udp">UDP</option>
-            </select>
-          </div>
+                <fieldset class="layout_logger" id="layout_logger">
+                    <div id="layout_logger_console" class="layout_logger_console">
+                        <div id="layout_logger_console_content" class="layout_logger_console_content"></div>
 
-          <div id="options_tcp" class="options_output, hidden">
-            <div class="fieldrow"> <label>TCP IP</label> <input id="tcp_ip" type="text"></input> </div>
-            <div class="fieldrow"> <label>TCP PORT</label> <input id="tcp_port" type="text"></input> </div>
-          </div>
+                        <button id="toggle_scroll" class="icon_button scroll_active" onclick=MX.toggle_scrollLog() title="Auto scroll">Auto scroll</button>
+                        <button class="icon_button reload" onclick=MX.getLog() title="Refresh log">Refresh log</button>
+                        <button class="icon_button clear" onclick=MX.flushLog() title="Flush logs">Flush logs</button>
+                    </div>
+                    <!-- <div id="logger_buttons">
+                      <button class="icon_button toggle_scroll scroll_active" onclick=MX.toggle_scrollLog()>Refresh log</button>
 
-          <div id="options_udp" class="options_output, hidden">
-            <div class="fieldrow"> <label>UDP IP</label> <input id="udp_ip" type="text"></input> </div>
-            <div class="fieldrow"> <label>UDP PORT</label> <input id="udp_port" type="text"></input> </div>
-          </div>
+                      <button class="icon_button reload" onclick=MX.getLog()>Refresh log</button>
+                      <button class="icon_button clear" onclick=MX.flushLog()>Flush logs</button>
+                    </div> -->
+                </fieldset>
 
-          <div id="options_file" class="options_output, hidden">
-            <div class="fieldrow"> <label>File path</label> <input id="file_path" type="text"></input> </div>
-            <div class="fieldrow"> <label>File duration</label> <input id="file_duration" type="text"></input> </div>
-            <div class="fieldrow"> <label>File bitrate</label> <input id="file_bitrate" type="text"></input> </div>
-            <div class="fieldrow"> <label>File temporay files path</label> <input id="file_tmp_path" type="text"></input> </div>
-          </div>
+                <div id="fullscreen_container" class="hidden" ondblclick="MX.imgFullscreen()">
+                    <img id="pipeline_graph_full" alt="Pipeline graph" ondblclick="">
+                    <div id="pipeline_graph_ctrl"> <p>SHIFT + MOUSEWHEEL</p> </div>
 
-          <div id="options_rtmp" class="options_output, hidden">
-            <div class="fieldrow"> <label>RTMP url</label> <input id="rtmp_url" type="text"></input> </div>
-          </div>
 
-        </fieldset>
+                    <div class="big_button">
+                        <button id="pipeline_graph_close" class="big_icon_button collapse" onclick="MX.imgFullscreen()" title="Full"></button>
+                    </div>
 
-		<button onclick="saveReloadPlay()" title="Pipeline">Run Pipeline</button>
+                </div>
 
-		<div id="pipelines_list" class="pipelines"></div>
-      </div>
-
-      <fieldset class="" id="layout_logger">
- 		<button class="icon_button clear" onclick=flushLog()>Flush logs</button>
-        <div id="layout_logger_console" class="layout_logger_console">
-          <div id="layout_logger_console_content" class="log"></div>
-
-          <button id="toggle_scroll" class="icon_button scroll_active" onclick=toggle_scrollLog()>Auto scroll</button>
-          <button class="icon_button reload" onclick=getLog()>Refresh log</button>
-         
+            </main>
         </div>
-      </fieldset>
-      </main>
-	<div class="footer">
-		<div  id="current_version"></div>
-		<button onclick="logOut()">Logout</div>
-	
-	</div>
-    </div>
-	
-  </body>
+
+        <div id="layout_footer">
+
+            <div id="footer_box_left">
+                <!-- <ul>
+                  <li> <a onclick="gotoPath('/settingshtml')"> Settings</a> </li>
+                  <li> <a onclick="gotoPath('/statushtml')"> Status</a> </li>
+                </ul> -->
+
+                <ul>
+                    <li>
+                        <a>Menu</a>
+                        <div>
+                            <ul>
+                                <li><a onclick="MX.gotoPath('/index')">Main</a><span>(1)</span></li>
+                                <li><a onclick="MX.gotoPath('/settingshtml')">Settings</a><span>(2)</span></li>
+                                <li><a onclick="MX.gotoPath('/statushtml')"> Status</a><span>(3)</span></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="footer_box_center">
+                <div id="current_date"> <p>DD/MM/YYYY</p> </div>
+
+                <div id="time_clock">
+                    <span id="time_clockHour">00</span>:<span id="time_clockMinute">00</span>:<span id="time_clockSecond">00</span>
+                </div>
+
+                <div id="current_version"></div>
+            </div>
+
+            <div id="footer_box_right">
+                <!-- <button onclick="MX.logOut()">salir</button> -->
+                <span id="footer_account_username_new"></span>
+                <span onclick="MX.logOut()" id="button_logout"></span>
+            </div>
+
+        </div>
+
+        <div id="layout_modal_container">
+            <div id="layout_modal_window"></div>
+        </div>
+
+    </body>
 </html>

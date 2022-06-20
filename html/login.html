@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-<!--Sebastian Porteiro 
-Zeusrs-->
 <html>
     <head>
-        <title>Mixter video mixer</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="/js/language.js"></script>
+        <title>Mixter Web</title>
+        <script src="/js/jquery-3.3.1.min.js"></script>
+        <script src="/js/jquery-ui-1.12.1.min.js"></script>
+        <script src="/js/language.js"></script>
+        <script src="/js/pipes_blueprint.js"></script>
         <script src="/js/main.js"></script>
         <script src="/js/alertify.min.js"></script>
-        <link type="text/css" href="/css/style.css" rel="stylesheet">
+        <link type="text/css" href="/css/style.min.css" rel="stylesheet">
         <link type="text/css" href="/css/alertify.css" rel="stylesheet">
     </head>
 
     <body>
-  	    <div id="container1" class="">
-  		      <div id="container2" class="">
-  			        <div id="login">
+  	    <div id="container1" class="login_container">
+  		    <div id="container2" class="login_container2">
+  			    <div id="login">
                     <h1>Mixter</h1>
-      			        <p id="login_welcome">Welcome to Mixter video mixer</p>
+      			    <p id="login_welcome">Bienvenido a Mixter</p>
                     <fieldset>
                         <div class="form">
-        					          <div class="fieldrow">
-              						    <span class="input_icon login_user"></span>
-              						    <input id="login_username" type="text" name="login" value="" placeholder="User">
-              					    </div>
-              					    <div class="fieldrow">
-              						    <span class="input_icon login_pass"></span>
-              						    <input id="login_password" type="password" name="password" placeholder="Pass">
-              						    <span id="toggle_pass" class="show_pass" onclick="toggle_pass();"></span>
-              					    </div>
-              					    <div class="fieldrow">
-              						    <button id="login_button" class="login_button" name="form.submitted" onclick="sendFormAsJSON()" value="Log In">Log In</button>
-              					    </div>
+				            <div class="fieldrow">
+      						    <span class="input_icon login_user"></span>
+      						    <input id="login_username" type="text" name="login" value="" placeholder="Usuario">
+      					    </div>
+      					    <div class="fieldrow">
+      						    <span class="input_icon login_pass"></span>
+      						    <input id="login_password" type="password" name="password" placeholder="Contrase&ntilde;a">
+      						    <span id="toggle_pass" class="show_pass" onclick="MX.toggle_pass();"></span>
+      					    </div>
+      					    <div class="fieldrow">
+      						    <button id="login_button" class="login_button" name="form.submitted" onclick="MX.sendFormAsJSON()" value="Log In"></button>
+      					    </div>
                         </div>
                     </fieldset>
                 </div>
-  		      </div>
+  		    </div>
   	    </div>
 
-	      <script>
-
-          $(document).ready(function() {
-
-            $(document).on('keypress',function(e) {
-              if (e.which == 13) {
-                $('#login_button').trigger( "click" );
-              }
+        <script>
+            $(document).ready(function() {
+                $(document).on('keypress',function(e) {
+                    if (e.which == 13) {
+                        $('#login_button').trigger("click");
+                    }
+                });
             });
-
-          });
-
-	      </script>
+        </script>
 
     </body>
 </html>

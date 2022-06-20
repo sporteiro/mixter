@@ -1,0 +1,152 @@
+[martes, 05. mayo 2020 07:36:12][DEBUG] Flush log: Log anterior cerrado en 20200505-07_36 .mixter.log
+[martes, 05. mayo 2020 07:39:01][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 07:39:01][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 07:39:02][DEBUG] Pipeline: Tuberia construida, bus conectado p_0
+[martes, 05. mayo 2020 07:39:02][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 07:39:02][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 07:39:02][DEBUG] Lanzando desde: videotest_src hasta: shm_sink
+[martes, 05. mayo 2020 07:39:02][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 07:39:02][DEBUG] Pipeline: Tuberia construida, bus conectado p_1
+[martes, 05. mayo 2020 07:39:03][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 07:39:03][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 07:39:03][DEBUG] Lanzando desde: shm_src hasta: window
+[martes, 05. mayo 2020 07:39:08][WARNING] Gstreamer Pipeline: trying to kill pipeline 1
+[martes, 05. mayo 2020 07:39:08][DEBUG] trying to delete graph
+[martes, 05. mayo 2020 08:11:13][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 08:11:13][DEBUG] Auto_launch desactivado, lanzar a mano
+[martes, 05. mayo 2020 08:11:23][WARNING] *******Trying to clean and restart everything*******
+[martes, 05. mayo 2020 08:11:23][WARNING] Pipelines: trying to kill all pipelines
+[martes, 05. mayo 2020 08:11:23][DEBUG] Eliminando archivos temporales...
+[martes, 05. mayo 2020 08:11:24][DEBUG] Eliminando archivos temporales y vaciando /dev/shm...'
+[martes, 05. mayo 2020 08:11:24][WARNING] *******Trying to clean and restart everything*******
+[martes, 05. mayo 2020 08:11:24][WARNING] Pipelines: trying to kill all pipelines
+[martes, 05. mayo 2020 08:11:24][DEBUG] Eliminando archivos temporales...
+[martes, 05. mayo 2020 08:11:24][DEBUG] Eliminando archivos temporales y vaciando /dev/shm...'
+[martes, 05. mayo 2020 08:11:25][WARNING] *******Trying to clean and restart everything*******
+[martes, 05. mayo 2020 08:11:25][WARNING] Pipelines: trying to kill all pipelines
+[martes, 05. mayo 2020 08:11:25][DEBUG] Eliminando archivos temporales...
+[martes, 05. mayo 2020 08:11:25][DEBUG] Eliminando archivos temporales y vaciando /dev/shm...'
+[martes, 05. mayo 2020 08:11:25][WARNING] *******Trying to clean and restart everything*******
+[martes, 05. mayo 2020 08:11:25][WARNING] Pipelines: trying to kill all pipelines
+[martes, 05. mayo 2020 08:11:25][DEBUG] Eliminando archivos temporales...
+[martes, 05. mayo 2020 08:11:25][DEBUG] Eliminando archivos temporales y vaciando /dev/shm...'
+[martes, 05. mayo 2020 08:12:38][DEBUG] Pipeline: Tuberia construida, bus conectado p_0
+[martes, 05. mayo 2020 08:12:38][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 08:12:38][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 08:12:38][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 08:12:43][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 08:12:43][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:10:54][DEBUG] Pipeline: Tuberia construida, bus conectado p_1
+[martes, 05. mayo 2020 09:10:55][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:10:55][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:10:55][DEBUG] Lanzando desde: shm_1_src hasta: window
+[martes, 05. mayo 2020 09:11:02][WARNING] Gstreamer Pipeline: trying to kill pipeline 1
+[martes, 05. mayo 2020 09:11:02][DEBUG] trying to delete graph
+[martes, 05. mayo 2020 09:13:21][DEBUG] Pipeline: Tuberia construida, bus conectado p_2
+[martes, 05. mayo 2020 09:13:21][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:13:21][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:13:21][DEBUG] Lanzando desde: shm_1_src hasta: window
+[martes, 05. mayo 2020 09:14:56][WARNING] Gstreamer Pipeline: trying to kill pipeline 2
+[martes, 05. mayo 2020 09:14:56][DEBUG] trying to delete graph
+[martes, 05. mayo 2020 09:15:14][DEBUG] Pipeline: Tuberia construida, bus conectado p_3
+[martes, 05. mayo 2020 09:15:14][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:15:14][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:15:14][DEBUG] Lanzando desde: shm_1_src hasta: udp_sink
+[martes, 05. mayo 2020 09:15:26][DEBUG] Pipeline: Tuberia construida, bus conectado p_4
+[martes, 05. mayo 2020 09:15:26][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:15:26][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:15:26][DEBUG] Lanzando desde: udp_1_src hasta: window
+[martes, 05. mayo 2020 09:16:43][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:43][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:43][DEBUG] Pipeline: Tuberia construida, bus conectado p_5
+[martes, 05. mayo 2020 09:16:43][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:43][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:43][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:44][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:44][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:44][DEBUG] Pipeline: Tuberia construida, bus conectado p_6
+[martes, 05. mayo 2020 09:16:44][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:44][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:44][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:44][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:44][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:44][DEBUG] Pipeline: Tuberia construida, bus conectado p_7
+[martes, 05. mayo 2020 09:16:44][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:44][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:44][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:44][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:44][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:44][DEBUG] Pipeline: Tuberia construida, bus conectado p_8
+[martes, 05. mayo 2020 09:16:44][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:44][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:44][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:45][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:45][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:45][DEBUG] Pipeline: Tuberia construida, bus conectado p_9
+[martes, 05. mayo 2020 09:16:45][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:45][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:45][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:45][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:45][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:45][DEBUG] Pipeline: Tuberia construida, bus conectado p_10
+[martes, 05. mayo 2020 09:16:45][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:45][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:45][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:45][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:45][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:45][DEBUG] Pipeline: Tuberia construida, bus conectado p_11
+[martes, 05. mayo 2020 09:16:45][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:45][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:45][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:45][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:45][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:45][DEBUG] Pipeline: Tuberia construida, bus conectado p_12
+[martes, 05. mayo 2020 09:16:45][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:45][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:45][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:46][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:46][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:46][DEBUG] Pipeline: Tuberia construida, bus conectado p_13
+[martes, 05. mayo 2020 09:16:46][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:46][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:46][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:46][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:46][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:46][DEBUG] Pipeline: Tuberia construida, bus conectado p_14
+[martes, 05. mayo 2020 09:16:46][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:46][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:46][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:47][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:47][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:47][DEBUG] Pipeline: Tuberia construida, bus conectado p_15
+[martes, 05. mayo 2020 09:16:47][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:47][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:47][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:47][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:47][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:47][DEBUG] Pipeline: Tuberia construida, bus conectado p_16
+[martes, 05. mayo 2020 09:16:47][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:47][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:47][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:47][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:47][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:47][DEBUG] Pipeline: Tuberia construida, bus conectado p_17
+[martes, 05. mayo 2020 09:16:47][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:47][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:47][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:47][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:47][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:47][DEBUG] Pipeline: Tuberia construida, bus conectado p_18
+[martes, 05. mayo 2020 09:16:47][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:47][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:47][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:16:47][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:16:47][DEBUG] Building multiple pipelines
+[martes, 05. mayo 2020 09:16:47][DEBUG] Pipeline: Tuberia construida, bus conectado p_19
+[martes, 05. mayo 2020 09:16:47][DEBUG] GST state PLAYING
+[martes, 05. mayo 2020 09:16:47][DEBUG] trying to convert .dot to .png
+[martes, 05. mayo 2020 09:16:47][DEBUG] Lanzando desde: videotest_1_src hasta: shm_sink
+[martes, 05. mayo 2020 09:17:55][WARNING] *******Trying to clean and restart everything*******
+[martes, 05. mayo 2020 09:17:55][WARNING] Pipelines: trying to kill all pipelines
+[martes, 05. mayo 2020 09:18:56][DEBUG] Configuraciones cargadas
+[martes, 05. mayo 2020 09:18:56][DEBUG] Auto_launch desactivado, lanzar a mano

@@ -1,0 +1,286 @@
+#layout_modal_window {
+
+  main {
+    max-height: calc(100% - 125px;)
+  }
+
+}
+
+
+
+
+
+
+
+
+#ui-datepicker-div {
+  border-radius: 0 !important;
+  height: auto;
+  margin-top: -25px;
+  width: 450px;
+
+  * {
+    border-radius: 0 !important;
+  }
+}
+  .ui-widget-header {
+    background: none;
+    background-color: $gray;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+  }
+  .ui-widget-content {
+    background: none;
+    background-color: $dark_gray;
+    border: none;
+    float: left;
+    width: 100%;
+  }
+  .ui-datepicker {
+      padding: 5px;
+
+      table {
+        margin-bottom: 0;
+
+        th {
+          height: 25px;
+          line-height: 25px;
+          padding: 0;
+        }
+      }
+      tbody {
+        padding: 0 5px;
+      }
+      .ui-datepicker-header {
+        padding: 0;
+      }
+      .ui-datepicker-title {
+        height: 25px;
+        line-height: 25px;
+        float: left;
+        width: calc(100% - 50px);
+      }
+      .ui-datepicker-prev,
+      .ui-datepicker-next {
+        background: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px;
+        height: 25px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        width: 25px;
+
+        &:hover {
+          background-color: transparent;
+          border: none;
+        }
+      }
+        .ui-datepicker-prev {
+          background-image: url(../svg/cal-prev.svg);
+          float: left;
+          left: 0;
+        }
+        .ui-datepicker-next {
+          background-image: url(../svg/cal-next.svg);
+          float: right;
+          right: 0;
+        }
+        .ui-datepicker-buttonpane {
+          margin: 0;
+
+          button {
+            background-color: $very_dark_gray;
+            border: solid 1px $very_dark_gray;
+            font-weight: normal;
+            height: 25px;
+            padding: 0;
+            width: 40%;
+
+            &:hover {
+              border: solid 1px $white;
+            }
+          }
+        }
+    }
+    .ui-widget-header .ui-icon {
+      background: none !important;
+    }
+
+    .ui-datepicker-calendar span {
+      letter-spacing: 1px;
+      padding: 4px 0 2px 0;
+    }
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+      background: none;
+      background-color: $gray;
+      border: solid 5px $gray;
+      font-size: 1.8rem;
+      height: 35px; // En realidad mide más. No se de donde sale el resto
+    }
+    .ui-state-highlight,
+    .ui-widget-content .ui-state-highlight,
+    .ui-widget-header .ui-state-highlight {
+      color: $moderate_green;
+    }
+    // .ui-state-hover,
+    // .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover {
+      border: none;
+    }
+    .ui-widget-content .ui-state-hover {
+      background-color: $very_dark_gray;
+      border: solid 5px $very_dark_gray;
+    }
+
+.ui-timepicker-div dl {
+  float: left;
+  margin: 0;
+  width: 100%;
+
+  dt {
+    color: $white;
+    float: left;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: right;
+    text-transform: uppercase;
+    width: 22%;
+  }
+  dd {
+    float: right;
+    height: 25px;
+    margin: 0;
+    padding: 5px 20px;
+    width: 78%;
+  }
+}
+.ui_tpicker_time_label {
+  display: none;
+}
+  .ui_tpicker_time {
+    float: right;
+    font-size: 2.4rem;
+    font-weight: 600;
+    height: 50px !important;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100% !important;
+  }
+    .ui_tpicker_hour,
+    .ui_tpicker_minute,
+    .ui_tpicker_second {
+      float: right;
+      width: 65%;
+    }
+
+.ui_tpicker_hour_label {
+  margin-top: 15px;
+}
+.ui-slider-horizontal {
+  background-color: $light_gray;
+
+  .ui-slider-handle {
+    background-color: $very_dark_gray;
+    border: none;
+    height: 12px;
+    margin: 0 -10px;
+    padding: 0;
+    top: -4px;
+
+    &:hover .ui-slider-horizontal {
+      background-color: $very_dark_blue;
+    }
+  }
+}
+  .ui-widget .ui-widget {
+    font-size: 0.5rem;
+  }
+
+#show_addedit_form {
+
+  p:first-child { display: none; }
+
+  #show_gap_list div {
+    background-color: $dark_gray;
+    border: dashed 1px white;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 300px;
+    padding: 5px;
+    width: 450px;
+
+    &:hover {
+      border: solid 1px white;
+    }
+    span {
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 15px;
+      font-family: 'Fira Mono', monospace !important;
+      font-size: 1.3rem;
+      height: 20px;
+      line-height: 20px;
+      width: 210px;
+
+      &:nth-child(1) {
+        float: left;
+      }
+      &:nth-child(2) {
+        background-image: url('../svg/stick_up.svg');
+        float: right;
+        text-align: right;
+      }
+      &:nth-child(3) {
+        background-image: url('../svg/stick_down.svg');
+        float: right;
+        text-align: right;
+      }
+      &:nth-child(4) {
+        background-image: url('../svg/stick&expand.svg');
+        float: left;
+        padding-left: 30px;
+      }
+    }
+
+  }
+
+  #warning_gap_duration {
+    float: left;
+    padding-left: 305px;
+    width: 100%;
+  }
+}
+#show_duration,
+#permission_duration {
+
+  label:not(:first-child) {
+    display: none;
+  }
+  select {
+    float: left;
+    width: 87px;
+  }
+  span {
+    background-color: $dark_gray;
+    border: solid 1px $dark_gray;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 5px;
+    padding: 0 5px;
+    width: auto;
+  }
+}
+
+#search_description_instructions {
+  padding-bottom: 20px;
+}
+#dynamic_num_items {
+  margin-right: 5px;
+}

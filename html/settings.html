@@ -1,43 +1,94 @@
 <!DOCTYPE html>
-<!--Sebastian Porteiro 
-Zeusrs-->
 <html>
     <head>
-        <title>Mixter video mixer</title>
+        <title>PlayIter Web</title>
         <script src="/js/jquery-3.3.1.min.js"></script>
+        <script src="/js/jquery-ui-1.12.1.min.js"></script>
 	    <script src="/js/language.js"></script>
+        <script src="/js/pipes_blueprint.js"></script>
         <script src="/js/main.js"></script>
         <script src="/js/alertify.min.js"></script>
         <link type="text/css" href="/css/alertify.css" rel="stylesheet">
-        <link type="text/css" href="/css/style.css" rel="stylesheet">
+        <link type="text/css" href="/css/style.min.css" rel="stylesheet">
 
         <script>
         $(document).ready(function() {
-            getAllsettings();
+            MX.getAllsettings();
         });
         </script>
     </head>
 
     <body>
-      <div class="">
+      <div class="layout_main_container">
+
         <header>
           <h1>Settings</h1>
-	  		<div id="settings"><button onclick="gotoPath('/index')">Home</button></div>
+          <p>Settings instructions</p>
         </header>
-        <main id="">
-          <div id="">
+
+        <main id="layout_main">
+
+          <div id="main_left">
             <div id="response"></div>
             <fieldset id="json_content">
             </fieldset>
-            <fieldset class="">
-              <div class="">
-                <button class="" onclick="saveAllsettings()">Save</button>
+            <fieldset class="big_buttons_container">
+              <div class="big_buttons">
+                <button class="big_icon_button save" onclick="MX.saveSettingFromInputs()" title='Save'></button>
               </div>
+            </fieldset>
+          </div>
+
+          <div id="main_right">
+            <h2>Presets</h2>
+            <fieldset class="">
+              <button class="header_button" onclick="MX.updateDisplay('preset_tdt_brave'); MX.getAllsettings();">TDT Brave</button>
+              <button class="header_button" onclick="MX.updateDisplay('preset_tdt_obplayer'); MX.getAllsettings();">TDT Obplayer</button>
+              <button class="header_button" onclick="MX.updateDisplay('preset_legalcopy'); MX.getAllsettings();">Legal Copy</button>
             </fieldset>
           </div>
 
         </main>
       </div>
+
+      <div id="layout_footer">
+        <div id="footer_box_left">
+          <!-- <ul>
+            <li> <a onclick="MX.gotoPath('/index')">Main</a> </li>
+            <li> <a onclick="MX.gotoPath('/statushtml')">Status</a> </li>
+          </ul> -->
+
+          <ul>
+            <li> <a>Menu</a>
+              <div>
+                <ul>
+                  <li><a onclick="MX.gotoPath('/index')">Main</a><span>(1)</span></li>
+                  <li><a onclick="MX.gotoPath('/settingshtml')">Settings</a><span>(2)</span></li>
+                  <li><a onclick="MX.gotoPath('/statushtml')"> Status</a><span>(3)</span></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+        <div id="footer_box_center">
+          <div id="current_date"> <p>DD/MM/YYYY</p> </div>
+
+          <div id="time_clock">
+            <span id="time_clockHour">00</span>:<span id="time_clockMinute">00</span>:<span id="time_clockSecond">00</span>
+          </div>
+
+          <div id="current_version"></div>
+        </div>
+
+        <div id="footer_box_right">
+          <!-- <button onclick="logOut()">salir</button> -->
+          <span id="footer_account_username_new"></span>
+          <span onclick="MX.logOut()" id="button_logout"></span>
+        </div>
+      </div>
+
     </body>
 
 </html>

@@ -1,0 +1,300 @@
+#layout_main {
+
+  #hostname_1_title,
+  #hostname_2_title {
+    border-bottom: solid 2px $very_dark_gray;
+    padding: 5px;
+    height: 35px;
+    width: 100%;
+  }
+  h2 {
+
+    width: calc(100% - 70px);
+
+    // font-family: 'Fira Mono', monospace !important;
+    // text-transform: uppercase;
+    //
+    // font-size: 1.5rem;
+    //
+    line-height: 25px;
+
+    // &.main_live {
+    //   background-image: url("../img/live.svg");
+    //   background-position: center right 10px;
+    //   background-repeat: no-repeat;
+    //   background-size: 20px;
+    // }
+  }
+}
+
+
+
+
+
+#layout_containers {
+  float: left;
+  height: 100%;
+  width: 300px;
+}
+
+.status_container {
+  // background-color: $alt_gray;
+  border-bottom-width: 27px;
+  border: solid 2px $very_dark_gray;
+  float: left;
+  height: calc(50vh - 5px);
+  width: 100%;
+
+  h2 {
+    margin: 0;
+  }
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+
+  &_data {
+    float: left;
+    height: calc(100% - 65px);
+    margin: 5px 0 0 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+
+    > div {
+      height: 25px;
+      float: left;
+      padding: 0 5px;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+  }
+
+  .container_buttons {
+
+    button {
+      float: right;
+    }
+  }
+
+}
+
+.enabled0 h2,
+.enabled0 .element_title { color: #999; }
+.enabled0 .element_value { color: #888; }
+
+  .enabled0 .cs_toggle { display: none; }
+
+.statusOK {background-color: $statusOK;}
+.statusKO {background-color: #a4721d;}
+
+.element_title {
+  float: left;
+  padding-top: 1px;
+  height: 25px;
+  line-height: 25px;
+  width: 40%;
+  display: inline-block;
+  text-align: right;
+  padding-right: 10px;
+
+  &:after {
+    content:":";
+  }
+}
+.element_value {
+  background-color: $dark_gray;
+  border: solid 1px $dark_gray;
+  // color: white !important;
+  display: inline-block;
+  float: left;
+  font-family: 'Fira Mono', monospace !important;
+  font-size: 1.3rem;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 5px;
+  width: 60%;
+}
+.emergency_status {
+  border-top: solid 2px $very_dark_gray;
+  height: 25px;
+  float: left;
+  line-height: 25px;
+  text-align: center;
+  width: 100%;
+}
+  .emergency_on { background-color: $image;}
+  .emergency_off { background-color: $very_dark_gray; }
+
+
+
+#layout_logger_status {
+  padding-left: 10px;
+  float: left;
+  height: 100%;
+  width: calc(100% - 600px);
+  min-width: 20px;
+
+  .layout_logger_console {
+    height: calc(50vh - 5px);
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+#layout_apps {
+  float: left;
+  height: 100%;
+  padding-left: 10px;
+  width: 300px;
+
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari 6.1+ */
+  flex-direction: column;
+
+  #button_switch {
+    margin: 0;
+    float: left;
+  }
+
+  #buttons_emergency {
+    float: right;
+    margin-bottom: 10px;
+    width: calc(100% - 50px);
+
+    .big_icon_button:not(.active) {
+      opacity: 0.5;
+    }
+
+  }
+
+  .header_button {
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+}
+
+  .app_buttons {
+    display: block;
+    height: auto;
+    margin-bottom: 5px;
+    float: left;
+    width: 100%;
+  }
+  .app_buttons_common {
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+
+    .header_button {
+      width: 100%;
+    }
+
+  }
+
+  .app_buttons_specific {
+    float: right;
+    width: 50%;
+    padding-left: 5px;
+
+    > div {
+      background-color: $statusOK;
+      display: inline-block;
+      height: 25px;
+      margin-bottom: 5px;
+      width: 100%;
+
+      .header_button {
+        float: right;
+        width: 100%;
+        -webkit-transition: width 0.3s ease;
+           -moz-transition: width 0.3s ease;
+                transition: width 0.3s ease;
+      }
+      &:hover .header_button {
+        border: solid 1px $white;
+        width: calc(100% - 15px);
+      }
+    }
+  }
+
+  .app_snapshot {
+    background-color: $dark_gray;
+    background-image: url("img/Logo_2030TenerifeTV_screen.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: solid 2px $very_dark_gray;
+    bottom: 55px;
+    float: left;
+    height: 163px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .app_info {
+    border: solid 2px $very_dark_gray;
+    float: right;
+    // height: calc(100% - 380px);
+    padding: 10px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-flex: 1 1 0px;
+    flex: 1 1 0px;
+
+    p {
+      padding: 0;
+    }
+  }
+
+.rol {
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0;
+}
+
+#backup {
+
+  .back_backup {
+    width: 100%;
+  }
+
+  #header_role {
+    // background-color: $dark_red;
+    // background-image: url("../svg/warning.svg");
+    // background-position: left center;
+    // background-repeat: no-repeat;
+    // background-size: 14px;
+    // text-align: center;
+  }
+  .app_buttons_specific > div {
+    background-color: $dark_red;
+  }
+  #app_info_text span {
+    background-color: $dark_red;
+    border-left: solid 1px $white;
+    border-right: solid 1px $white;
+    display: block;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center;
+
+    &#warning {
+      border-top: solid 1px $white;
+      &_message {
+        border-bottom: solid 1px $white;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

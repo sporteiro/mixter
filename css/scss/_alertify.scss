@@ -1,0 +1,28 @@
+.alertify {
+
+  .ajs-header,
+  .ajs-dialog,
+  .ajs-footer {
+    background-color: $gray;
+  }
+
+  .ajs-dialog {
+    border-left: solid 20px $very_dark_blue;
+    height: 20%;
+    margin: 20% auto;
+  }
+
+  .ajs-header {
+    color: transparent;
+  }
+
+  .ajs-button {
+    display: none;
+  }
+
+
+}
+
+.alertify-notifier .ajs-message.ajs-warning {
+  background-color: $bright_orange !important;
+}

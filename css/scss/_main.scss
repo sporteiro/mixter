@@ -1,0 +1,246 @@
+.layout_main_container {
+
+  .restart {
+    float: right;
+    margin-left: 40px;
+  }
+}
+
+#layout_main {
+  height: calc(100vh - 95px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  float: left;
+}
+
+#main_left {
+  float: left;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 10px;
+  width: calc(100% - 300px);
+}
+#main_right {
+  padding-left: 10px;
+  float: left;
+  width: 300px;
+
+  .header_button {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
+#led_buttons {
+  float: right;
+
+  button {
+    margin-left: 0;
+  }
+}
+
+.led_parent {
+  float: left;
+  margin-left: 10px;
+  width: 25px;
+
+  > button {
+    opacity: 0.5;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+#led_buttons_children {
+  float: right;
+  left: 140px;
+  position: relative;
+  top: 40px;
+}
+
+.led_children {
+  float: left;
+
+  button {
+    margin-top: 5px;
+  }
+}
+
+.header_button.restart {
+  background-color: $dark_red;
+}
+
+// #player_input {
+//   height: 160px;
+// }
+//
+// #player_output {
+//   height: 190px;
+// }
+
+#pipeline_list {
+    width: 100%;
+    float: left;
+
+    .pipeline {
+        background-color: $alt_gray;
+        border: solid 1px $very_dark_blue;
+        border-left: solid 10px $very_dark_blue;
+        box-shadow: 2px 2px 5px $very_dark_gray;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        min-width: 300px;
+        width: calc(20% - 10px);
+
+        position: relative;
+        left: 0;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+
+        p {
+            float: left;
+            margin-top: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .pipe_id {
+            float: right;
+        }
+
+        .pipe_flow {
+            display: inline-flex;
+            width: 100%;
+
+            p {
+                float: left;
+                white-space: nowrap;
+            }
+
+            .pipe_in_1 {
+                width: fit-content;
+            }
+            .pipe_conn {
+                width: -webkit-fill-available;
+                text-align: center;
+            }
+            .pipe_out {
+                float: right;
+                width: fit-content;
+            }
+
+            .pipe_in_2 {
+                width: 100%;
+            }
+        }
+
+        .pipe_buttons {
+            float: left;
+            margin-top: 10px;
+            width: 100%;
+
+            .pipe_info,
+            .pipe_reconn,
+            .pipe_forward {
+                background-color: $very_dark_blue;
+            }
+
+            .pipe_kill {
+                background-color: $dark_red;
+                float: left;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+#fullscreen_container {
+    background-color: $white;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+
+    #pipeline_graph_full {
+        height: 100%;
+        overflow-x: scroll;
+        width: auto;
+    }
+
+    #pipeline_graph_ctrl {
+        background-color: $very_dark_blue;
+        border: solid 1px $white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+
+        p {
+            display: block;
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    .big_button {
+        background-color: $very_dark_blue;
+        border-radius: 5px;
+        padding: 5px;
+        bottom: 20px;
+        position: fixed;
+        right: 10px;
+
+        #pipeline_graph_close {
+
+        }
+    }
+
+}
+
+    #pipeline_graph {
+        width: 100%;
+    }
+
+#pipeline_info {
+    background-color: $dark_gray;
+    border-radius: 5px;
+    float: left;
+    min-height: 150px;
+    padding: 5px;
+    width: 100%;
+
+    &_text {
+        color: $white;
+        background-color: $dark_gray;
+        border: none;
+        border-radius: 5px;
+        min-height: 150px;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#dot_download_link {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+#toggle_scroll  {
+  float: left;
+  margin-left: 0;
+}

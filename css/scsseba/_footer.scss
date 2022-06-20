@@ -1,0 +1,174 @@
+#footer_box_left,
+#footer_box_right {
+  height: 100%;
+  width: calc(50% - 300px);
+}
+  #footer_box_left {
+    float: left;
+
+    > ul {
+      float: left;
+      height: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        cursor: pointer;
+        float: left;
+        height: 40px;
+
+        &:hover > div,
+        &.showMenu > div {
+          display: block;
+        }
+        a {
+          font-size: 2rem;
+          height: 40px;
+          line-height: 40px;
+          margin-right: 30px;
+          padding-left: 25px;
+          text-transform: uppercase;
+
+          span {
+            margin-left: 10px;
+            width: 20px;
+          }
+        }
+        div {
+          border-bottom: solid 10px transparent;
+          bottom: 40px;
+          display: none;
+          position: absolute;
+          width: auto;
+          z-index: 4;
+
+          &:hover {
+            display: block !important;
+          }
+        }
+        ul {
+          background-color: $very_dark_gray;
+          border-left: solid 15px $very_dark_blue;
+          list-style: none;
+          padding: 10px;
+
+          li {
+            font-size: 14px;
+            height: 40px;
+            width: 100%;
+
+            &:hover {
+              background-color: $dark_gray;
+            }
+            a {
+              float: left;
+              font-size: 1.6rem;
+              height: 40px;
+              line-height: 40px;
+              margin: 0;
+              padding: 0 20px 0 45px;
+              width: calc(100% - 25px);
+            }
+            span {
+              float: right;
+              margin-right: 5px;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    > ul > li {
+      background-image: url('../img/gear.svg');
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+    }
+
+      > ul > li li {
+        background-image: url('../img/gear.svg');
+        background-position: left 15px center;
+        background-repeat: no-repeat;
+        background-size: 14px;
+      }
+    }
+
+  #footer_box_center {
+    display: inline-block;
+    float: left;
+    width: 600px;
+
+    #current_date,
+    #current_version {
+      float: left;
+      line-height: 40px;
+      display: inline-block;
+      text-align: center;
+      width: 200px;
+
+      p, a {
+        font-family: 'Fira Mono', monospace !important;
+        line-height: 40px;
+      }
+    }
+
+    #current_date p {float: right; }
+    #current_version p {float: left; padding: 0;}
+
+    #time_clock {
+      display: inline-block;
+      font-family: 'Fira Mono', monospace !important;
+      font-size: 2rem;
+      float: left;
+      margin: 0 auto;
+      text-align: center;
+      width: 200px;
+
+      span {
+        display: inline;
+        font-family: 'Fira Mono', monospace !important;
+        font-size: 2rem;
+      }
+    }
+
+    .goto {
+      border-bottom: solid 2px white;
+      cursor: pointer;
+    }
+  }
+
+  #footer_box_right {
+    float: right;
+    text-align: right;
+  }
+    #footer_account_username_new {
+      background-image: url(../svg/user.svg);
+      background-position: right 15px center;
+      background-repeat: no-repeat;
+      background-size: 18px;
+      border-right: solid 2px white;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      margin-right: 10px;
+      padding-right: 45px;
+      cursor: pointer;
+    }
+    #button_logout {
+      background-image: url("../svg/logout.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px;
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      position: relative;
+      top: 5px;
+    }
+
+  .version {
+    float: left;
+    line-height: 40px;
+  }

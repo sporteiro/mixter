@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mixter Web</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-ui-1.12.1.min.js"></script>
+    <script src="/js/pipes_blueprint.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/status.js"></script>
+    <script src="/js/language.js"></script>
+    <script src="/js/alertify.min.js"></script>
+    <link type="text/css" href="/css/alertify.css" rel="stylesheet">
+    <link type="text/css" href="/css/style.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="layout_main_container">
+
+      <header>
+        <h1>Status</h1>
+        <p>Status instructions</p>
+
+        <button id="mode_button" class="header_button scheme" title="" onclick="MX.Status.statusViewMode();">Scheme Mode</button>
+      </header>
+
+      <main id="layout_main">
+
+        <div id="modeA">
+
+          <div id="layout_containers">
+          	<div id="status_container_1" class="status_container">
+    	        <div id="status_container_data_1" class="status_container_data">
+                <!--<button onclick=suicideBrave()>Suicide Brave</button>-->
+                <!-- <button onclick=suicide()>Suicide</button> -->
+              </div>
+        	  </div>
+          	<div id="status_container_2" class="status_container">
+          	  <div id="status_container_data_2" class="status_container_data"></div>
+          	</div>
+          </div>
+
+          <div class="layout_logger" id="layout_logger_status">
+            <div id="layout_logger_console_1" class="layout_logger_console">
+              <div id="layout_logger_console_content_1" class="layout_logger_console_content"></div>
+              <button class="icon_button download" onclick="window.open(`//${window.location.hostname}:23233/logs/status.log`)" title="Descargar logs de TDT_PLAYOUT_1"></button>
+            </div>
+
+            <div id="layout_logger_console_2" class="layout_logger_console">
+              <div id="layout_logger_console_content_2" class="layout_logger_console_content"></div>
+              <button class="icon_button download" title="Descargar logs de TDT_PLAYOUT_2"></button>
+            </div>
+          </div>
+
+          <div id="layout_apps" class="layout_apps">
+
+            <div id="status_label">
+              <div class="back_main"></div>
+              <div class="back_backup"></div>
+              <h2 id="header_role"></h2>
+            </div>
+
+            <div id="buttons_all">
+              <div id="buttons_emergency">
+              </div>
+            </div>
+
+            <div class="app_buttons" onmouseout="MX.Status.showInfo('2030')">
+
+              <div class="app_buttons_common">
+                <button id="link_parrilla" class="header_button" onmouseover="MX.Status.showInfo('parrilla')" onclick="window.open('http://192.168.53.41')">Parrilla</button>
+                <button id="link_copialegal" onmouseover="MX.Status.showInfo('copia_legal')" onclick="window.open('http://192.168.53.83')" class="header_button">Copia legal</button>
+              </div>
+
+              <div class="app_buttons_specific">
+
+                <div>
+                  <button id="link_player" class="header_button" onmouseover="MX.Status.showInfo('player')" onclick="window.open(`//${window.location.hostname}:23233`)">Player</button>
+                </div>
+                <div>
+                  <button id="link_ctrlmanual" class="header_button" onmouseover="MX.Status.showInfo('control_manual')" onclick="window.open(`//${window.location.hostname}:23456`)">Ctrl manual</button>
+                </div>
+                <div>
+                  <button id="link_novnc" class="header_button" onmouseover="MX.Status.showInfo('novnc')" onclick="window.open(`//${window.location.hostname}:6080/vnc.html`)">noVNC</button>
+                </div>
+                <div>
+                  <button id="link_brave" class="header_button" onclick="window.open(`//${window.location.hostname}:5000`)" onmouseover="MX.Status.showInfo('brave')">Brave</button>
+                  <!-- <button id="link_snowmix" class="header_button" onclick="window.open(`//${window.location.hostname}:6082/vnc.html`)" onmouseover="MX.Status.showInfo('snowmix')">SnowMix</button> -->
+                  <!-- <button onclick="MX.Status.showInfo('snowmix')" class="icon_button info" title="Información acerca de la aplicación Snowmix"></button> -->
+                </div>
+
+              </div>
+            </div>
+
+            <div class="app_snapshot" id="app_snapshot">
+
+            </div>
+
+            <div class="app_info">
+              <p id="app_info_text">Sitúese sobre los botones para ver una breve descripción de cada una de las aplicaciones listadas</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div id="modeB" class="hidden">
+
+          <svg>
+
+            <defs>
+                <pattern id="pattern-checkers" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" >
+                    <rect x="0" y="0" width="10" height="10" fill="rgb(15, 79, 49)" />
+                    <rect x="10" y="10" width="10" height="10" fill="rgb(15, 79, 49)" />
+                </pattern>
+
+                <marker id="markerCircle" markerWidth="16" markerHeight="16" refX="8" refY="8" markerUnits="userSpaceOnUse">
+                    <circle cx="8" cy="8" r="8" />
+                </marker>
+
+                <marker id="markerArrow" markerWidth="20" markerHeight="20" refX="10" refY="10" markerUnits="userSpaceOnUse" orient="auto">
+                    <path d="M 0 0 L 20 10 L 0 20 Z" />
+                </marker>
+
+                <clipPath id="screenView">
+                    <rect x="0" y="0" width="0" height="0" />
+                </clipPath>
+
+            </defs>
+
+
+            <g id='box_1_s' class="server_box">
+              <rect class="box" x="0" y="0" width="0" height="0" />
+              <circle class="led" />
+              <line class="box_line" />
+              <text class="box_title_s" text-anchor="end">Main Source</text>
+
+                <g class="server_info">
+                    <text class="box_text box_ipself" text-anchor="start">IP main</text>
+                </g>
+                <g class="server_info">
+                    <text class="box_text box_uptime" text-anchor="start">0 Días, 00:00:00</text>
+                </g>
+                <g class="server_info">
+                    <rect id="cpu_total_1" class="bar_total" x="0" y="0" width="0" height="0" />
+                    <rect id="cpu_used_1" class="bar_used" x="0" y="0" width="0" height="0" />
+                    <text class="box_text box_cpu_usage" text-anchor="start">CPU_usage</text>
+                </g>
+                <g class="server_info">
+                    <rect id="ram_total_1" class="bar_total" x="0" y="0" width="0" height="0" />
+                    <rect id="ram_used_1" class="bar_used" x="0" y="0" width="0" height="0" />
+                    <text class="box_text box_ram_usage" text-anchor="start">RAM_usage</text>
+                </g>
+                <g class="server_info">
+                    <rect id="shm_total_1" class="bar_total" x="0" y="0" width="0" height="0" />
+                    <rect id="shm_used_1" class="bar_used" x="0" y="0" width="0" height="0" />
+                    <text class="box_text box_shm_usage" text-anchor="start">SHM_usage</text>
+                </g>
+            </g>
+
+            <g id='box_2_s' class="server_box">
+                <rect class="box" x="0" y="0" width="0" height="0" />
+                <circle class="led" />
+                <line class="box_line" />
+                <text class="box_title_s" text-anchor="end">Main Source</text>
+
+                <g class="server_info">
+                    <text class="box_text box_ipself" text-anchor="start">IP main</text>
+                </g>
+                <g class="server_info">
+                    <text class="box_text box_uptime" text-anchor="start">0 Días, 00:00:00</text>
+                </g>
+                <g class="server_info">
+                    <rect id="cpu_total_2" class="bar_total" x="0" y="0" width="0" height="0" />
+                    <rect id="cpu_used_2" class="bar_used" x="0" y="0" width="0" height="0" />
+                    <text class="box_text box_cpu_usage" text-anchor="start">CPU_usage</text>
+                </g>
+                <g class="server_info">
+                    <rect id="ram_total_2" class="bar_total" x="0" y="0" width="0" height="0" />
+                    <rect id="ram_used_2" class="bar_used" x="0" y="0" width="0" height="0" />
+                    <text class="box_text box_ram_usage" text-anchor="start">RAM_usage</text>
+                </g>
+                <g class="server_info">
+                    <rect id="shm_total_2" class="bar_total" x="0" y="0" width="0" height="0" />
+                    <rect id="shm_used_2" class="bar_used" x="0" y="0" width="0" height="0" />
+                    <text class="box_text box_shm_usage" text-anchor="start">SHM_usage</text>
+                </g>
+            </g>
+
+            <g id='lines_1' class="line">
+              <line id="lines_1_active" class="connect_line" />
+              <path id="lines_1_data_1" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+              <path id="lines_1_data_2" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+              <path id="lines_1_data_3" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+              <path id="lines_1_data_4" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+            </g>
+
+            <g id='lines_1_e' class="line">
+              <line id="lines_1_e_cfg" class="connect_line" />
+              <line id="lines_1_e_active" class="connect_line" />
+              <g class="lines_1_e_g"> <path id="lines_1_e_data_1" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+              <g class="lines_1_e_g"> <path id="lines_1_e_data_2" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+              <g class="lines_1_e_g"> <path id="lines_1_e_data_3" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+              <g class="lines_1_e_g"> <path id="lines_1_e_data_4" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+            </g>
+
+            <g id='lines_2_e' class="line">
+              <line id="lines_2_e_cfg" class="connect_line" />
+              <line id="lines_2_e_active" class="connect_line" />
+              <g id="lines_2_e_path">
+                <g class="lines_2_e_g"> <path id="lines_2_e_data_1" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+                <g class="lines_2_e_g"> <path id="lines_2_e_data_2" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+                <g class="lines_2_e_g"> <path id="lines_2_e_data_3" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+                <g class="lines_2_e_g"> <path id="lines_2_e_data_4" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" /> </g>
+              </g>
+            </g>
+
+            <g id='lines_2' class="line">
+              <line id="lines_2_active" class="connect_line" />
+              <path id="lines_2_data_1" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+              <path id="lines_2_data_2" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+              <path id="lines_2_data_3" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+              <path id="lines_2_data_4" class="data" d="M 10 0 L 20 10 L 10 20 L 0 10 z" />
+            </g>
+
+            <g id='box_1_r'>
+              <rect class="box box_back" x="0" y="0" width="0" height="0" />
+              <image xlink:href="" clip-path="url(#screenView)" />
+              <rect class="box box_overlay" x="0" y="0" width="0" height="0" />
+              <text class="box_title_r" text-anchor="end">Main Receiver</text>
+              <rect class="box_stand" />
+            </g>
+
+            <g id='box_2_r'>
+              <rect class="box box_back" x="0" y="0" width="0" height="0" />
+              <image xlink:href="" clip-path="url(#screenView)" />
+              <rect class="box box_overlay" x="0" y="0" width="0" height="0" />
+              <text class="box_title_r" text-anchor="end">Backup Receiver</text>
+              <rect class="box_stand" />
+            </g>
+
+          </svg>
+
+        </div>
+
+      </main>
+
+    </div>
+
+
+
+    <div id="layout_footer">
+
+      <div id="footer_box_left">
+        <!-- <ul>
+          <li><a onclick="MX.gotoPath('/index')">Main</a></li>
+          <li><a onclick="MX.gotoPath('/settingshtml')">Settings</a></li>
+        </ul> -->
+
+        <ul>
+          <li> <a>Menu</a>
+            <div>
+              <ul>
+                <li><a onclick="MX.gotoPath('/index')">Main</a><span>(1)</span></li>
+                <li><a onclick="MX.gotoPath('/settingshtml')">Settings</a><span>(2)</span></li>
+                <li><a onclick="MX.gotoPath('/statushtml')"> Status</a><span>(3)</span></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+      <div id="footer_box_center">
+        <div id="current_date"> <p>DD/MM/YYYY</p> </div>
+
+        <div id="time_clock">
+          <span id="time_clockHour">00</span>:<span id="time_clockMinute">00</span>:<span id="time_clockSecond">00</span>
+        </div>
+
+        <div id="current_version"></div>
+      </div>
+<!-- Todavia no tiene funcionalidad -->
+      <div id="footer_box_right">
+        <span id="footer_account_username_new"></span>
+        <span onclick="MX.logOut()" id="button_logout"></span>
+      </div>
+
+    </div>
+  </body>
+
+</html>

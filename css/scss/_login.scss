@@ -1,0 +1,119 @@
+#container1 {
+    background-color: $light_gray;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+    #container2 {
+        background-image: url("../img/login_back.svg");
+        background-position: right -40px top -50px;
+        background-repeat: no-repeat;
+        background-size: 200px;
+        background-color: $gray;
+        border-left: solid 20px $very_dark_blue;
+        color: $white;
+        height: 450px;
+        max-width: 100%;
+        padding: 30px 50px;
+        width: 800px;
+
+        > p {
+            display: none !important;
+        }
+    }
+    #login {
+        float: left;
+        width: 100%;
+
+        h1 {
+            background-image: url("../img/Logo_2030TenerifeTV.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: none;
+            border-bottom: solid 1px white;
+            height: 160px;
+            font-size: 0;
+            margin-bottom: 20px;
+            padding: 0;
+            width: 100%;
+        }
+
+        #login_welcome {
+            font-variant: small-caps;
+            font-size: 2.2rem;
+            line-height: 27px;
+            margin-bottom: 30px;
+            padding: 0;
+            text-align: center !important;
+            width: 100%;
+        }
+
+        .form {
+            float: left;
+            margin: 0 115px;
+            text-align: center;
+            width: 450px;
+
+        .fieldrow {
+            height: 25px;
+        }
+
+        input {
+            padding-left: 40px;
+        }
+
+            .login_button {
+                background-color: rgb( 40, 85, 100);
+                background-image: url("../img/login.svg");
+                background-position: right 20px center;
+                background-repeat: no-repeat;
+                background-size: 1.8rem;
+                font-size: 0;
+                margin-top: 5px;
+                width: 450px;
+
+                &:hover,
+                &:focus {
+                    border: solid 1px $white;
+                }
+            }
+        }
+
+        .login_user { background-image: url("../img/user.svg"); }
+        .login_pass { background-image: url("../img/lock.svg"); }
+        .show_pass { background-image: url("../img/pass_show.svg"); }
+        .hide_pass { background-image: url("../img/pass_hide.svg"); }
+        .forgot_pass { background-image: url("../img/envelope.svg"); }
+
+        #toggle_pass {
+            background-position: right 5px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            cursor: pointer;
+            display: block;
+            float: right;
+            height: 25px;
+            margin-bottom: 5px;
+            padding-right: 6px;
+            position: relative;
+            width: 40px;
+            z-index: 50;
+            top: -25px;
+        }
+    }
+
+    #login_message {
+        bottom: 65px;
+        left: 20px;
+        margin: 0 138px;
+        pointer-events: none;
+        text-align: left !important;
+        width: 400px !important;
+    }

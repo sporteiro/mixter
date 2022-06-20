@@ -1,0 +1,27 @@
+<header>
+    <h1 id="">Check pipeline info</h1>
+    <!-- <div id="advanced_search_message" class="obwidget message hidden" data-type="message"></div> -->
+</header>
+
+<fieldset id="pipeline_graph_cont">
+    <img id="pipeline_graph" ondblclick="MX.imgFullscreen()" alt="Pipeline graph">
+</fieldset>
+
+<fieldset>
+    <div id="pipeline_info">
+        <textarea id="pipeline_info_text" class="mono" onclick="MX.selectPipelineText()"></textarea>
+    </div>
+</fieldset>
+
+<fieldset class="big_buttons_container">
+    <div class="big_buttons">
+        <button class="big_icon_button cancel" onclick="MX.closeModalWindow()" title="Cancel"></button>
+        <button class="big_icon_button copy" onclick="MX.copyText('pipeline_info_text')" title="Copy"></button>
+        <button class="big_icon_button expand" onclick="MX.imgFullscreen()" title="Fullscreen"></button>
+
+        <button class="big_icon_button download" title="Download .dot file">
+            <a id="dot_download_link" href="" target="_blank" download></a>
+        </button>
+
+    </div>
+</fieldset>

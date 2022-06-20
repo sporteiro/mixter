@@ -1,0 +1,280 @@
+.status_container {
+  // background-color: $alt_gray;
+  border: solid 2px $very_dark_gray;
+  border-bottom-width: 27px;
+  float: left;
+  width: 100%;
+  height: calc(50% - 5px);
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+  &_data {
+    float: left;
+    height: calc(100% - 70px);
+    margin: 5px 0 0 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+
+    > div {
+      height: 25px;
+      float: left;
+      padding: 0 5px;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+  }
+
+  .container_buttons {
+    padding: 0 5px;
+    float: left;
+    width: 100%;
+
+    button {
+      float: right;
+    }
+  }
+
+}
+
+.enabled0 h2,
+.enabled0 .element_title { color: #999; }
+.enabled0 .element_value { color: #888; }
+
+  .enabled0 .cs_toggle { display: none; }
+
+#status_container_1 .cs_emergency0 { background-image: url("../svg/emergency1_0.svg"); }
+#status_container_1 .cs_emergency1 { background-image: url("../svg/emergency1_1.svg"); }
+#status_container_2 .cs_emergency0 { background-image: url("../svg/emergency2_0.svg"); }
+#status_container_2 .cs_emergency1 { background-image: url("../svg/emergency2_1.svg"); }
+
+.cs_suicide { background-image: url("../svg/suicide.svg"); }
+
+.cs_enabled0 { background-image: url("../svg/disconnect.svg"); }
+.cs_enabled1 { background-image: url("../svg/reconnect.svg"); }
+
+
+h2 {
+  border-bottom: solid 2px $very_dark_gray;
+  font-family: 'Fira Mono', monospace !important;
+  font-size: 1.8rem;
+  width: 100%;
+
+  &.main_live {
+    background-image: url(img/live.svg);
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+  }
+}
+.statusOK {background-color: $statusOK;}
+.statusKO {background-color: $bright_orange;}
+
+.element_title {
+  float: left;
+  padding-top: 1px;
+  height: 25px;
+  line-height: 25px;
+  width: 40%;
+  display: inline-block;
+  text-align: right;
+  padding-right: 10px;
+
+  &:after {
+    content:":";
+  }
+}
+.element_value {
+  background-color: $dark_gray;
+  border: solid 1px $dark_gray;
+  // color: white !important;
+  display: inline-block;
+  float: left;
+  font-family: 'Fira Mono', monospace !important;
+  font-size: 1.3rem;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 5px;
+  width: 60%;
+}
+.emergency_status {
+  border-top: solid 2px $very_dark_gray;
+  height: 25px;
+  float: left;
+  line-height: 25px;
+  text-align: center;
+  width: 100%;
+}
+  .emergency_on { background-color: $image;}
+  .emergency_off { background-color: $very_dark_gray; }
+
+.layout_logger_console {
+  background-color: $black;
+  border-bottom: solid 27px $very_dark_gray;
+  float: left;
+  height: calc(50% - 5px);
+  padding: 10px;
+  width: 100%;
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+  button {
+    float: left;
+    height: 18px;
+    width: 18px;
+    margin-top: 14px;
+  }
+}
+  .layout_logger_console_content {
+    background-color: $black;
+    // color: $console;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: $moderate_green;
+    height: auto;
+    height: 100%;
+    width: 100%;
+    -moz-user-select: text;
+         user-select: text;
+
+    p {
+      font-family: 'Fira Mono', monospace !important;
+      line-height: 1.3;
+      padding: 0 10px 0 0;
+      width: 100%;
+    }
+
+  }
+    // .log_error { color: $console_error; }
+    // .log_player { color: $console_player; }
+    // .log_sync { color: $console_sync; }
+    // .log_warning { color: $console_warning; }
+
+  #button_switch {
+    position: absolute;
+    top: 12px;
+    z-index: 3;
+  }
+    .cs_switch { background-image: url("../svg/switch.svg"); }
+
+  #header_role {
+    background-image: none;
+  }
+  .app_buttons {
+    display: block;
+    height: auto;
+    margin-bottom: 5px;
+    float: left;
+    width: 100%;
+  }
+  .app_buttons_common {
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+
+    > div {
+      display: inline-block;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+  }
+  .app_buttons_specific {
+    float: right;
+    width: 50%;
+    padding-left: 5px;
+
+    > div {
+      background-color: $statusOK;
+      display: inline-block;
+      margin-bottom: 5px;
+      width: 100%;
+
+      .header_button {
+        float: right;
+        width: 100%;
+        -webkit-transition: width 0.3s ease;
+           -moz-transition: width 0.3s ease;
+                transition: width 0.3s ease;
+      }
+      &:hover .header_button {
+        border: solid 1px $white;
+        width: calc(100% - 15px);
+      }
+    }
+  }
+
+  .app_snapshot {
+    background-color: $dark_gray;
+    background-image: url("img/Logo_2030TenerifeTV_screen.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: solid 2px $very_dark_gray;
+    bottom: 55px;
+    float: left;
+    height: 163px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .app_info {
+    border: solid 2px $very_dark_gray;
+    float: right;
+    // height: calc(100% - 380px);
+    padding: 10px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-flex: 1 1 0px;
+    flex: 1 1 0px;
+
+    p {
+      padding: 0;
+    }
+  }
+
+.rol {
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0;
+}
+
+#backup {
+  .back_backup {
+    width: 290px;
+  }
+  h1 {
+    // background-color: $dark_red;
+    background-image: url("../svg/warning.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 80px center;
+    background-size: 20px;
+  }
+  .app_buttons_specific > div {
+    background-color: $dark_red;
+  }
+  #app_info_text span {
+    background-color: $dark_red;
+    border-left: solid 1px $white;
+    border-right: solid 1px $white;
+    display: block;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center;
+
+    &#warning {
+      border-top: solid 1px $white;
+      &_message {
+        border-bottom: solid 1px $white;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

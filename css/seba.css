@@ -1,0 +1,34 @@
+.pipelines	{
+	overflow-y: auto;
+	max-height:360px;
+	padding: 5px;
+	float: left; 
+	width: 100%;
+}
+
+.eachpipeline	{
+	background-color: green;
+	color: white;
+	padding: 5px;
+	width: 300px;
+	float: left; 
+	margin: 10px;
+}
+
+.pipeline_desc	{
+	font-size:1em;
+}
+
+.eachpipeline	h3{
+	background-color: #000;
+	color: white;
+	padding: 5px;
+}
+.invisible	{
+	visibility: hidden;
+	display: none;
+}
+.visible	{
+	visibility: visible;
+	display: inherit;
+}
