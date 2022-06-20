@@ -52,7 +52,7 @@ import cairo
 gi.require_foreign('cairo')
 #Define this as a constant because it is needed before loading itself
 
-SETTINGS_PATH = '/home/administrador/.openbroadcaster/'
+SETTINGS_PATH = '/mixter'
 #SETTINGS_PATH = '/home/administrador/mixter/'
 #SETTINGS_PATH = '/media/sporteiro/Seba/ITER/desarrollo/mixter/local_settings'
 
