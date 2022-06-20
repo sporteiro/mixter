@@ -34,7 +34,7 @@ RUN apt-get update && \
 	gstreamer1.0-plugins-good \
 	gstreamer1.0-plugins-bad \
 	gstreamer1.0-plugins-ugly \
-	libffi6 \
+	libffi7 \
 	libffi-dev \
 	gobject-introspection \
 	libcairo2-dev \
