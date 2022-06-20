@@ -45,9 +45,9 @@ from mixter import Mixter
 
 
 HOST_NAME = '0.0.0.0'
-PORT_NUMBER = 4567
+PORT_NUMBER = 8066
 NOW = datetime.datetime.now().strftime("%Y%m%d")
-SALT = str('a6747e6d9aaa9d5d2e9f172df3e08a1b9bd56dc159b7cb9d72e457f6' + str(NOW))
+SALT = str('9df3e8281eb7cc58472991635a9e7e62d614f688c018eaa1cf376192' + str(NOW))
 TOKEN = hashlib.sha224(SALT.encode('UTF-8')).hexdigest()
 
 MIXTER = Mixter()
